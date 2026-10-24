@@ -1,0 +1,938 @@
+
+/* ==========================
+   ADZKIA'S WORLD
+   Pastel Pixel Game Theme
+========================== */
+
+/* Warna utama */
+:root {
+    --pastel-blue: #eaf4ff;
+    --pastel-purple: #e8ddfb;
+    --pastel-pink: #fbe7f1;
+    --pastel-green: #dff4d8;
+    --text-color: #554b68;
+    --border-color: #d9c9ef;
+    --purple-dark: #74618f;
+    --pink-dark: #d6a8ce;
+}
+
+/* Pengaturan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--pastel-blue);
+    color: var(--text-color);
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.7;
+}
+
+/* ==========================
+   HEADER DAN NAVIGASI
+========================== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 18px 6%;
+    background-color: #ffffff;
+    border-bottom: 2px solid var(--pastel-purple);
+    box-shadow: 0 3px 12px rgba(120, 100, 160, 0.06);
+}
+
+header h2 {
+    margin: 0;
+    color: var(--purple-dark);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+nav a {
+    padding: 9px 12px;
+    color: #625080;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+nav a:hover {
+    background-color: #f0e8fc;
+    color: #8b6db5;
+}
+
+/* ==========================
+   PENGATURAN SECTION
+========================== */
+
+section {
+    width: 100%;
+    max-width: 100%;
+    padding: 70px 8%;
+    scroll-margin-top: 90px;
+}
+
+section > h2 {
+    margin-bottom: 25px;
+    color: var(--purple-dark);
+    font-family: 'Fredoka', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+section p {
+    margin-bottom: 15px;
+}
+
+/* ==========================
+   HOME
+========================== */
+
+#home {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    min-height: 85vh;
+    padding: 65px 8%;
+    text-align: center;
+    background-color: #dff4ff;
+    border-bottom: 5px dashed #b8dcb7;
+    overflow: hidden;
+}
+
+
+/* Foto profil */
+#home img {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    image-rendering: pixelated;
+    border: 6px solid #fff4fa;
+    outline: 4px solid #b69adf;
+    box-shadow: 8px 8px 0 #a8c9e5, -8px -8px 0 #b7ddb8;
+}
+
+/* Label welcome */
+#home > p:first-of-type {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 18px;
+    color: #8c75bd;
+    background-color: #fff4fa;
+    border: 3px solid #b69adf;
+    box-shadow: 4px 4px 0 #a8c9e5;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 2;
+    letter-spacing: 2px;
+}
+
+/* Judul Home */
+#home h1 {
+    color: #8e79bd;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 22px;
+    line-height: 1.8;
+    animation: fadeIn 1s ease 0.4s both;
+}
+
+#home h2 {
+    margin: 12px 0;
+    color: #e88fba;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    animation: fadeIn 1s ease 0.6s both;
+}
+
+#home p:not(:first-of-type) {
+    animation: fadeIn 1s ease 0.2s both;
+}
+
+/* Tombol Start Exploring */
+#home a {
+    display: inline-block;
+    max-width: 100%;
+    margin-top: 18px;
+    padding: 14px 24px;
+    color: white;
+    background-color: #b69adf;
+    border: 3px solid #8c75bd;
+    box-shadow: 5px 5px 0 #a8c9e5;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    animation: fadeIn 1s ease 0.8s both;
+}
+
+#home a:hover {
+    color: var(--text-color);
+    background-color: #a8c9e5;
+    box-shadow: 2px 2px 0 #8c75bd;
+    transform: translate(3px, 3px);
+}
+
+#home a:active {
+    transform: translate(5px, 5px);
+    box-shadow: none;
+}
+
+/* Dekorasi bintang dan bunga */
+#home::before {
+    content: "✦  ✧  ⋆";
+    position: absolute;
+    top: 45px;
+    left: 7%;
+    color: #b69adf;
+    font-size: 32px;
+    letter-spacing: 12px;
+    animation: float 3s ease-in-out infinite;
+}
+
+#home::after {
+    content: "✿  ✿";
+    position: absolute;
+    right: 8%;
+    bottom: 35px;
+    color: #e88fba;
+    font-size: 30px;
+    letter-spacing: 10px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ==========================
+   ABOUT ME
+========================== */
+
+#about {
+    position: relative;
+    padding: 70px 10%;
+    background: linear-gradient(135deg, #fff7fb, #f4efff);
+    overflow: hidden;
+}
+
+#about h2 {
+    position: relative;
+    margin-bottom: 30px;
+    color: #9878b5;
+    text-align: center;
+    font-size: 30px;
+}
+
+#about h2::before {
+    content: "🌷 ✦";
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#about h2::after {
+    content: "୨୧ ─────── ♡ ─────── ୨୧";
+    display: block;
+    margin-top: 12px;
+    color: var(--pink-dark);
+    font-size: 14px;
+}
+
+#about p {
+    position: relative;
+    max-width: 850px;
+    margin: 15px auto;
+    padding: 20px 25px;
+    color: #655b70;
+    background: rgba(255, 255, 255, 0.85);
+    border: 2px solid #eadff5;
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 var(--pastel-purple);
+    font-size: 15px;
+    line-height: 1.9;
+    transition: transform 0.3s ease;
+}
+
+#about p:hover {
+    transform: translateY(-4px);
+}
+
+#about::before {
+    content: "✦";
+    position: absolute;
+    top: 35px;
+    left: 5%;
+    color: #c3a7df;
+    font-size: 35px;
+    transform: rotate(-15deg);
+}
+
+#about::after {
+    content: "✿";
+    position: absolute;
+    right: 6%;
+    bottom: 25px;
+    color: #e7a9ca;
+    font-size: 35px;
+}
+
+/* ==========================
+   SKILLS
+========================== */
+
+#skills {
+    background-color: #eaf5ff;
+}
+
+#skills .section-description {
+    margin-bottom: 30px;
+    color: #77718f;
+    text-align: center;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Kartu Skills */
+.skill-card {
+    padding: 22px 16px;
+    text-align: center;
+    background-color: #fffdf7;
+    border: 2px solid #d8c4f1;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(120, 100, 160, 0.06);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-card.show-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-card:hover {
+    background-color: #fff4fa;
+    border-color: #bba5df;
+    box-shadow: 0 8px 18px rgba(120, 100, 160, 0.12);
+    transform: translateY(-5px);
+}
+
+.skill-icon {
+    font-size: 32px;
+}
+
+.skill-card h3 {
+    margin: 12px 0 8px;
+    color: #625080;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.skill-card p {
+    margin-bottom: 0;
+    color: #77718f;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ==========================
+   EDUCATION
+========================== */
+
+#education {
+    padding-top: 25px;
+    background-color: #fff7fb;
+}
+
+#education > h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#education .section-description {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #77718f;
+    text-align: center;
+}
+
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.education-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 22px;
+    background-color: #ffffff;
+    border: 1px solid #e1d5f3;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(120, 100, 160, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.education-card:hover {
+    border-color: #c7b1e8;
+    box-shadow: 0 8px 18px rgba(120, 100, 160, 0.12);
+    transform: translateY(-4px);
+}
+
+.education-icon {
+    font-size: 32px;
+}
+
+.education-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.education-year {
+    color: #a078a0;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.education-card h3 {
+    margin: 8px 0;
+    color: #625080;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.education-info p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.education-badge {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 10px;
+    color: #876589;
+    background-color: #f5e6f3;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+/* Label checkpoint */
+.education-card::after {
+    content: "✦ CHECKPOINT";
+    display: inline-block;
+    align-self: center;
+    padding: 7px 10px;
+    color: #4c8057;
+    background-color: #dff4d8;
+    border: 2px solid #acd3a9;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 8px;
+}
+
+/* ==========================
+   EXPERIENCE
+========================== */
+
+#experience {
+    background-color: #f0f9f4;
+}
+
+#experience .section-description {
+    margin-bottom: 30px;
+    color: #77718f;
+    text-align: center;
+}
+
+.experience-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.experience-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 22px;
+    background-color: #ffffff;
+    border: 1px solid #e1d5f3;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(120, 100, 160, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.experience-card:hover {
+    border-color: #c7b1e8;
+    box-shadow: 0 8px 18px rgba(120, 100, 160, 0.12);
+    transform: translateY(-4px);
+}
+
+.experience-icon {
+    flex-shrink: 0;
+    font-size: 35px;
+}
+
+.experience-info {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.experience-date {
+    color: #62977c;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.experience-card h3 {
+    margin: 5px 0;
+    color: #625080;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.experience-card h4 {
+    margin: 5px 0 8px;
+    color: #527c68;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.experience-department {
+    color: #77718f;
+    font-size: 14px;
+}
+
+.experience-description {
+    margin-top: 12px;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* Label quest */
+.experience-card::after {
+    content: "✓ QUEST COMPLETED";
+    display: inline-block;
+    align-self: center;
+    padding: 8px 10px;
+    color: #4c8057;
+    background-color: #dff4d8;
+    border: 2px solid #acd3a9;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 8px;
+}
+
+.experience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.experience-tags span {
+    padding: 6px 10px;
+    color: #527c68;
+    background-color: #e4f5e9;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+/* ==========================
+   CONTACT
+========================== */
+
+#contact {
+    background-color: #f3eaff;
+    text-align: center;
+}
+
+#contact .section-description {
+    margin-bottom: 30px;
+    color: #77718f;
+}
+
+.contact-card {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 28px;
+    background-color: #fffdf7;
+    border: 2px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 #c7b1e8;
+}
+
+.contact-card > p {
+    margin-bottom: 15px;
+    color: #625080;
+    line-height: 1.8;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.contact-links a {
+    display: inline-block;
+    max-width: 100%;
+    padding: 10px 16px;
+    color: #625080;
+    background-color: #e8ddfb;
+    border: 1px solid #d8c4f1;
+    border-radius: 10px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.contact-links a:hover {
+    background-color: #dcd0f6;
+    transform: translateY(-3px);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer {
+    width: 100%;
+    padding: 30px 20px;
+    text-align: center;
+    color: var(--text-color);
+    background-color: var(--pastel-purple);
+    border-top: 4px dashed #c7b1e8;
+}
+
+footer p {
+    margin: 0;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+footer .copyright {
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* Tombol kembali ke atas */
+#backToTop {
+    display: none;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 9999;
+    width: 45px;
+    height: 45px;
+    color: #625080;
+    background-color: #e8ddfb;
+    border: 2px solid #c7b1e8;
+    border-radius: 12px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* ==========================
+   ANIMASI
+========================== */
+
+/* Dekorasi melayang */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Elemen muncul perlahan */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animasi section saat di-scroll */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.scroll-reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================
+   RESPONSIVE - TABLET
+========================== */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 16px 5%;
+        text-align: center;
+    }
+
+    nav {
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    section {
+        padding: 50px 6%;
+    }
+
+    #home h1 {
+        font-size: 20px;
+    }
+
+    #home::before {
+        top: 20px;
+        left: 4%;
+        font-size: 22px;
+        letter-spacing: 5px;
+    }
+
+    #home::after {
+        right: 4%;
+        bottom: 20px;
+        font-size: 22px;
+        letter-spacing: 5px;
+    }
+
+    #about {
+        padding: 50px 6%;
+    }
+
+    #about h2 {
+        font-size: 25px;
+    }
+
+    #about p {
+        padding: 16px;
+        font-size: 14px;
+    }
+}
+
+/* ==========================
+   RESPONSIVE - MOBILE
+========================== */
+
+@media (max-width: 600px) {
+    #home {
+        min-height: auto;
+        padding: 55px 6% 60px;
+    }
+
+    #home img {
+        width: 145px;
+        height: 145px;
+    }
+
+    #home > p:first-of-type {
+        padding: 8px 10px;
+        font-size: 7px;
+        line-height: 1.8;
+        letter-spacing: 1px;
+    }
+
+    #home h1 {
+        font-size: clamp(16px, 5vw, 22px);
+        line-height: 1.8;
+        overflow-wrap: break-word;
+    }
+
+    #home h2 {
+        font-size: 13px;
+        overflow-wrap: anywhere;
+    }
+
+    #home p {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    #home a {
+        padding: 11px 18px;
+    }
+
+    /* Skills */
+    .skills-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Education */
+    .education-card {
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .education-card h3 {
+        font-size: 16px;
+    }
+
+    .education-card::after {
+        font-size: 7px;
+    }
+
+    /* Experience */
+    #experience {
+        padding: 40px 6%;
+    }
+
+    .experience-card {
+        gap: 10px;
+        padding: 16px;
+    }
+
+    .experience-icon {
+        font-size: 25px;
+    }
+
+    .experience-card h3 {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .experience-card h4 {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .experience-date,
+    .experience-department,
+    .experience-description {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .experience-tags {
+        gap: 6px;
+        margin-top: 10px;
+    }
+
+    .experience-tags span {
+        padding: 5px 8px;
+        font-size: 11px;
+    }
+
+    .experience-card::after {
+        font-size: 7px;
+    }
+
+    /* Contact */
+    #contact {
+        padding: 40px 6%;
+    }
+
+    .contact-card {
+        padding: 20px 16px;
+    }
+
+    .contact-card > p {
+        font-size: 14px;
+        line-height: 1.7;
+        overflow-wrap: anywhere;
+    }
+
+    .contact-links {
+        gap: 10px;
+        margin-top: 16px;
+    }
+
+    .contact-links a {
+        padding: 10px 12px;
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
+}
+
+/* HP kecil */
+@media (max-width: 450px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-links {
+        flex-direction: column;
+    }
+}
+
+/* Kurangi animasi sesuai preferensi pengguna */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .scroll-reveal,
+    .skill-card {
+        opacity: 1;
+        transform: none;
+    }
+}
